@@ -8,9 +8,8 @@ services:
         SUNO_COOKIE: ${SUNO_COOKIE}
     volumes:
       - ./public:/app/public
-
-    ports: ${PORT}
-
+    ports:
+      - ${PORT}
     labels:
       - traefik.enable=true
       - traefik.http.routers.${HASH}.entrypoints=websecure
