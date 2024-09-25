@@ -9,4 +9,4 @@ services:
     volumes:
       - ./public:/app/public
     ports:
-      - "3001:3000"
+      - "3001"
