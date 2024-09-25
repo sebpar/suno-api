@@ -10,9 +10,3 @@ services:
       - ./public:/app/public
     ports:
       - ${PORT}
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.${HASH}.entrypoints=websecure
-      - traefik.http.routers.${HASH}.tls.certResolver=letsencrypt
-      - traefik.http.routers.${HASH}.rule=Host(`${SUNO_HOST}`)
-      - traefik.http.services.${HASH}.loadbalancer.server.port=${SUNO_PORT}
